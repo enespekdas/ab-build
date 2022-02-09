@@ -20,6 +20,6 @@ runs:
       shell: bash
     - run: python --version
       shell: bash
-    - run: python build.py
+    - run: python  build.py
       shell: bash
     

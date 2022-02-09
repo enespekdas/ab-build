@@ -23,7 +23,7 @@ if parseJson.details[0]["dockerFilePath"] == "":
     parseJson.details[0]["dockerFilePath"] = "./Dockerfile"
 buildYap=subprocess.check_output("podman build --tag "+parseJson.details[0]["imageName"]+":"+parseJson.details[0]["tag"]+" -f "+parseJson.details[0]["dockerFilePath"], shell=True)
 print(buildYap)
-echoYap=subprocess.check_output("echo ls yapıyorum", shell=True)
+echoYap=subprocess.check_output("echo ls yapiyorum", shell=True)
 print(echoYap)
 lsYap=subprocess.check_output("ls", shell=True)
 print(lsYap)
