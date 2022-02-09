@@ -5,7 +5,7 @@ class ParseBuildData():
     securityTest=[]
 
     def __init__(self):
-        print("")
+        pass
        
     def test(self):
         print("imagecalisti")

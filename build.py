@@ -1,6 +1,4 @@
-
 import sys
-# sys.path is a list of absolute path strings
 sys.path.append('./classes')
 
 import json
