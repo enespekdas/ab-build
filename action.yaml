@@ -18,4 +18,8 @@ runs:
       shell: bash
     - run: ls
       shell: bash
+    - run: python --version
+      shell: bash
+    - run: python build.py
+      shell: bash
     
