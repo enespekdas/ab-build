@@ -21,10 +21,8 @@ osSystem = platform.system()
 #     if item['builder'] == "docker":
 #         osSystem = platform.system()
 #         cloudNative.dockerBuildandPush(osSystem)
-parseJson.test()
+if parseJson.details[0]["dockerFilePath"] == "":
+    parseJson.details[0]["dockerFilePath"] = "./Dockerfile"
+p=subprocess.check_output("podman build --tag "+parseJson.details[0]["imageName"]+":"+parseJson.details[0]["tag"]+" -f "+parseJson.details[0]["dockerFilePath"], shell=True)
 
-print( parseJson.build)
-
-p=subprocess.check_output("podman build --tag akimage:latest -f ./Dockerfile", shell=True)
-
-print (p)
+print(p)

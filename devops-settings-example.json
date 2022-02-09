@@ -76,10 +76,10 @@
                 "app": "swo-core",
                 "registryUsername":"enespekdas",
                 "registryPassword":"en.141220",
-                "imageName":"docker-test",
+                "imageName":"image-test",
                 "registryName":"docker.io",
-                "dockerFilePath":".",
-                "tag":"latest",
+                "dockerFilePath":"",
+                "tag":"enes1",
                 "dockerFileName":"Dockerfile_example",
                 "repositoryName":"enespekdas"
             }
