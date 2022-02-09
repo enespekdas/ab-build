@@ -3,7 +3,7 @@ description: 'Docker file will be created image from buildah , image will be sen
 inputs:
   USERNAME:  # path
     description: ' '
-    required: true
+    required: false
     default: 'username'
 outputs:
   Result: 
