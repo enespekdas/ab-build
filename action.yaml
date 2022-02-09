@@ -25,5 +25,6 @@ runs:
     - run : ls ${{ github.action_path }}
       shell: bash
     - run : python ../${{ github.action_path }}/build.py
+      shell: bash
  
     
