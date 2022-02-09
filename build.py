@@ -1,10 +1,8 @@
-import sys
-sys.path.append('${{ github.action_path }}/classes')
 
 import json
 import os
 import platform
-from parseBuildData import ParseBuildData
+from classes.parseBuildData import ParseBuildData
 import subprocess
 
 with open('devops-settings-example.json') as json_file:
