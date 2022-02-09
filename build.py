@@ -5,7 +5,7 @@ import platform
 from classes.parseBuildData import ParseBuildData
 import subprocess
 
-with open('devops-settings-example.json') as json_file:
+with open('${{ github.action_path }}/devops-settings-example.json') as json_file:
     data = dict(json.load(json_file))
 
 parseJson=ParseBuildData()
