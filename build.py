@@ -1,5 +1,5 @@
 import sys
-sys.path.append('./classes')
+sys.path.append('${{ github.action_path }}/classes')
 
 import json
 import os
