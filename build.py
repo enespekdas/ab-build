@@ -7,7 +7,7 @@ import json
 import os
 import platform
 from parseBuildData import ParseBuildData
-
+import subprocess
 
 with open('devops-settings-example.json') as json_file:
     data = dict(json.load(json_file))
@@ -24,3 +24,7 @@ osSystem = platform.system()
 parseJson.test()
 
 print( parseJson.build)
+
+p=subprocess.check_output("podman build --tag akimage:latest -f ./Dockerfile", shell=True)
+
+print (p)

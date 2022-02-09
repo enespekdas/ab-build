@@ -1,7 +1,12 @@
+
+import sys
+# sys.path is a list of absolute path strings
+sys.path.append('./classes')
+
 import json
 import os
 import platform
-from classes.parseBuildData import ParseBuildData
+from parseBuildData import ParseBuildData
 
 
 with open('devops-settings-example.json') as json_file:
