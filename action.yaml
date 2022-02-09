@@ -1,0 +1,21 @@
+name: 'Docker File is Getting Ready'
+description: 'Docker file will be created image from buildah , image will be send docker.hub repository . After image will pull machine and run.'
+inputs:
+  USERNAME:  # path
+    description: ' '
+    required: true
+    default: 'username'
+outputs:
+  Result: 
+    description: "Build step results"
+    value: "Build steps  finished"
+runs:
+  using: "composite"
+  steps: 
+    - name: Repository Files are downloading
+      uses: actions/checkout@v2
+    - run: pwd 
+      shell: bash
+    - run: ls
+      shell: bash
+    
