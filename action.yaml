@@ -24,7 +24,7 @@ runs:
       shell: bash
     - run : ls ${{ github.action_path }}
       shell: bash
-    - run : python ${{ github.action_path }}/build.py
+    - run : python ${{ github.action_path }}/build.py enestest
       shell: bash
  
     
