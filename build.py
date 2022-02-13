@@ -4,6 +4,7 @@ import os
 import platform
 from classes.parseBuildData import ParseBuildData
 import subprocess
+import sys
 
 with open('devops-settings-example.json') as json_file:
     data = dict(json.load(json_file))
@@ -17,6 +18,10 @@ osSystem = platform.system()
 #     if item['builder'] == "docker":
 #         osSystem = platform.system()
 #         cloudNative.dockerBuildandPush(osSystem)
+
+print( sys.argv[0])
+print( sys.argv[1])
+
 if parseJson.details[0]["dockerFilePath"] == "":
     parseJson.details[0]["dockerFilePath"] = "./Dockerfile"
 buildYap=subprocess.check_output("podman build --tag "+parseJson.details[0]["imageName"]+":"+parseJson.details[0]["tag"]+" -f "+parseJson.details[0]["dockerFilePath"], shell=True)
