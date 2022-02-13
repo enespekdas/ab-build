@@ -5,6 +5,10 @@ inputs:
     description: ' '
     required: false
     default: 'username'
+  PASSWORD:  # path
+    description: ' '
+    required: false
+    default: 'password'
 outputs:
   Result: 
     description: "Build step results"
@@ -14,7 +18,7 @@ runs:
   steps: 
     - name: Repository Files are downloading
       uses: actions/checkout@v2
-    - run : echo ${{ inputs.USERNAME }}
+    - run : echo ${{ inputs.PASSWORD }}
       shell: bash
     - run : python ${{ github.action_path }}/build.py ${{ inputs.USERNAME }}
       shell: bash
