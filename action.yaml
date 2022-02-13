@@ -26,7 +26,7 @@ runs:
       shell: bash   
     - run : echo ${{ inputs.USERNAME }}
       shell: bash
-    - run : python ${{ github.action_path }}/build.py ${{ inputs.USERNAME }}
+    - run : python ${{ github.action_path }}/build.py ${{ inputs.USERNAME }} ${{ inputs.PASSWORD }}
       shell: bash
  
     

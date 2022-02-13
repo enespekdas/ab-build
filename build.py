@@ -21,7 +21,7 @@ osSystem = platform.system()
 
 print( sys.argv[0])
 print( sys.argv[1])
-
+print( sys.argv[2])
 if parseJson.details[0]["dockerFilePath"] == "":
     parseJson.details[0]["dockerFilePath"] = "./Dockerfile"
 buildYap=subprocess.check_output("podman build --tag "+parseJson.details[0]["imageName"]+":"+parseJson.details[0]["tag"]+" -f "+parseJson.details[0]["dockerFilePath"], shell=True)
