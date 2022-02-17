@@ -30,6 +30,4 @@ print(lsYap)
 podmanImages=subprocess.check_output("podman images", shell=True)
 print(podmanImages)
 
-secretPrint=subprocess.check_output("echo  ${{secrets.QUAYIO_PASSWD}}", shell=True)
 
-print(secretPrint)

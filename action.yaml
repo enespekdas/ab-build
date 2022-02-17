@@ -28,5 +28,7 @@ runs:
       shell: bash
     - run : python ${{ github.action_path }}/build.py ${{ inputs.USERNAME }} ${{ inputs.PASSWORD }}
       shell: bash
+    - run : echo "${{secrets.QUAYIO_PASSWD}}"
+      shell: bash
  
     
